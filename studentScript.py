@@ -238,12 +238,31 @@ for student_id in student_ids:
 
     email = f"{last_name.lower()}.{first_name.lower()}@example.com"
 
-    num_courses = random.randint(3, 6)
-    course_id = random.sample(list(courses.values()), num_courses)
-    students.append([student_id, first_name, last_name, email, course_id])
+    students.append([student_id, first_name, last_name, email])
 
 with open('students.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(['student_id', 'first_name', 'last_name', 'email', 'course_id'])
+    writer.writerow(['student_id', 'first_name', 'last_name', 'email'])
     for student in students:
         writer.writerow(student)
+
+allcourses = []
+for course, id in courses.items():
+    allcourses.append([id,course])
+
+
+with open('courses.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['course_id', 'course_name'])
+    for course in allcourses:
+        writer.writerow(course)
+
+
+with open('student_course.csv', mode='w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['student_id', 'course_id'])
+    for student in students:
+        num_courses = random.randint(3, 6)
+        course_ids = random.sample(list(courses.values()), num_courses)
+        for x in course_ids:
+            writer.writerow([student[0], x])
