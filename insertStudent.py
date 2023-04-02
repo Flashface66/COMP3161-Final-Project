@@ -28,12 +28,37 @@ cursor.execute("""CREATE TABLE student_course (
   FOREIGN KEY (course_id) REFERENCES courses (course_id)
 )""")
 
+cursor.execute("""CREATE TABLE lecturers (
+    lect_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100)
+)""")
+
+cursor.execute("""CREATE TABLE lect_course (
+  lect_id INT,
+  course_id VARCHAR(10),
+  PRIMARY KEY (lect_id, course_id),
+  FOREIGN KEY (lect_id) REFERENCES lecturers (lect_id),
+  FOREIGN KEY (course_id) REFERENCES courses (course_id)
+)""")
+
 with open('students.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     next(reader)
     
     for row in reader:
         query = "INSERT INTO students (student_id, first_name, last_name, email) VALUES (%s, %s, %s, %s)"
+        values = (int(row[0]), row[1], row[2], row[3])
+        cursor = mydb.cursor()
+        cursor.execute(query, values)
+
+with open('lecturers.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    next(reader)
+    
+    for row in reader:
+        query = "INSERT INTO lecturers (lect_id, first_name, last_name, email) VALUES (%s, %s, %s, %s)"
         values = (int(row[0]), row[1], row[2], row[3])
         cursor = mydb.cursor()
         cursor.execute(query, values)
@@ -57,6 +82,17 @@ with open('student_course.csv', newline='') as csvfile:
         values = (row[0], row[1])
         cursor = mydb.cursor()
         cursor.execute(query, values)
+
+with open('lecturer_course.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    next(reader)
+    
+    for row in reader:
+        query = "INSERT INTO lect_course (lect_id, course_id) VALUES (%s, %s)"
+        values = (row[0], row[1])
+        cursor = mydb.cursor()
+        cursor.execute(query, values)
+
 
 mydb.commit()
 mydb.close()
