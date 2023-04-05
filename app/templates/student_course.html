@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block css %}{% endblock %}
+{% block main %}
+
+<div class="container">
+    {% for course in courses %}
+    <p>
+        <a href="{{ course.url }}">{{ course.course_name }}</a>
+    </p>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -14,7 +14,7 @@
   </head>
   <body>
     <header>
-        {% include "header.html" %}
+      {% include "header.html" %}
     </header>
     <main>
         <div class="container">
@@ -28,6 +28,7 @@
     </footer>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/app.js') }}"></script>
     {% block js %} {% endblock%}

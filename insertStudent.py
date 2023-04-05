@@ -1,7 +1,7 @@
 import csv
 import mysql.connector
 
-mydb = mysql.connector.connect(host="localhost",user="root", password="Normal78")
+mydb = mysql.connector.connect(host="localhost",user="root", password="Passwordnt")
 
 cursor = mydb.cursor()
 cursor.execute("DROP DATABASE IF EXISTS notquiteourvle")
@@ -9,7 +9,7 @@ cursor.execute("CREATE DATABASE notquiteourvle")
 cursor.execute("USE notquiteourvle")
 
 cursor.execute("""CREATE TABLE students (
-    student_id INT PRIMARY KEY,
+    student_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
     email VARCHAR(100)

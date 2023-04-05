@@ -1,0 +1,218 @@
+course_id,course_name
+ITDB3007,Introduction to databases
+ITJA2010,Object-Oriented Programming in Java
+ITWD3010,"Web Development with HTML, CSS, and JavaScript"
+ITDS4020,Data Structures and Algorithms
+ITOS3010,Operating Systems
+ITCN4030,Computer Networks
+ITDB4010,Database Management Systems
+ITSE5010,Software Engineering
+ITAI6010,Artificial Intelligence
+ITML6015,Machine Learning
+ITCG4010,Computer Graphics
+ITHC4010,Human-Computer Interaction
+ITCA4010,Computer Architecture and Organization
+ITIS5010,Information Security and Privacy
+ITBD6010,Big Data Analytics
+ITCC5010,Cloud Computing
+ITBC6010,Blockchain and Cryptocurrencies
+ITCV6010,Computer Vision
+ITNL6010,Natural Language Processing
+ITDM5010,Data Mining
+ITDW5010,Data Warehousing
+ITIR5010,Information Retrieval
+ITIO6010,Internet of Things
+ITNS5010,Network Security
+ITMA5010,Mobile Application Development
+ITPL4010,Programming Languages
+ITCD5010,Compiler Design
+ITCF6010,Computer Forensics
+ITES5010,Embedded Systems
+ITPC6010,Parallel and Distributed Computing
+ITDS6010,Data Science
+ITCS6010,Cloud Security
+ITCE4010,Computer Ethics and Professionalism
+ITMS4010,Computer Music and Sound Design
+ITCG4015,Computer Gaming and Virtual Reality
+ITSC6010,Social Computing and Networks
+ITUC6010,Ubiquitous Computing
+ITVM5010,Virtual Machines and Emulators
+ITWS5010,Web Services and APIs
+ITAP5010,Advanced Programming Techniques
+ITDI6010,Digital Image Processing
+ELEN3003,Digital Signal Processing
+ITDS5010,Distributed Systems
+ITHR6010,Human-Robot Interaction
+ITIC6010,Innovative Computing Technologies
+ITMP6010,Machine Vision and Perception
+ITMC6010,Multimedia Computing
+ITNP5010,Network Programming
+ITRT5010,Real-Time Systems
+ITRA6010,Robotics and Automation
+ITWC5010,Web Content Management Systems
+ITWS6010,Web Security
+ITWN5010,Wireless Networks
+ITCC6010,Cloud Computing Technologies
+ITCC6015,Cloud Computing Security
+ITCC6020,Cloud Computing Architecture
+ITCC6025,Cloud Computing Services
+ITCI6010,Computational Intelligence
+ITAS5010,Computer Algebra Systems
+ITCN5010,Computer Networks and Security
+BIOL1001,Introduction to Biology
+BIOL1011,General Biology I
+BIOL1021,General Biology II
+BIOL2021,Cell Biology
+BIOL3011,Genetics
+BIOL3021,Evolution
+BIOL3031,Ecology
+BIOL4011,Anatomy and Physiology
+BIOL4021,Molecular Biology
+BIOL4031,Microbiology
+BIOL4041,Neurobiology
+BIOL4051,Immunology
+BIOL4061,Biochemistry
+BIOL4071,Plant Biology
+BIOL4081,Animal Behavior
+BIOL4091,Conservation Biology
+BIOL4101,Biostatistics
+BIOL4111,Marine Biology
+BIOL4121,Environmental Science
+BIOL4131,Human Anatomy
+BIOL4141,Physiology
+BIOL4151,Developmental Biology
+BIOL4161,Pharmacology
+BIOL4171,Cancer Biology
+BIOL4181,Medical Microbiology
+BIOL4191,Ecological Genetics
+BIOL4201,Bioinformatics
+BIOL4211,Virology
+BIOL4221,Immunogenetics
+BIOL4231,Population Biology
+BIOL4241,Neuropharmacology
+BIOL4251,Biological Oceanography
+BIOL4261,Biomechanics
+BIOL4271,Ecotoxicology
+BIOL4281,Animal Physiology
+BIOL4291,Stem Cell Biology
+BIOL4301,Entomology
+BIOL4311,Animal Ecology
+BIOL4321,Environmental Physiology
+BIOL4331,Bioengineering
+BIOL4341,Medical Physiology
+BIOL4351,Physiological Ecology
+BIOL4361,Computational Biology
+BIOL4371,Cognitive Neuroscience
+BIOL4381,Developmental Genetics
+BIOL4391,Biodiversity and Conservation
+BIOL4401,Endocrinology
+BIOL4411,Behavioral Ecology
+BIOL4421,Toxicology
+BIOL4431,Bioenergetics
+BIOL4441,Plant Physiology
+BIOL4451,Biological Modeling
+BIOL4461,Genomics
+BIOL4471,Parasitology
+BIOL4481,Symbiosis
+BIOL4491,Aquatic Ecology
+BIOL4501,Bioethics
+BIOL4511,Animal Communication
+BIOL4521,Conservation Genetics
+BIOL4531,Molecular Genetics
+BIOL4541,Biomaterials
+BIOL4551,Evolutionary Genetics
+CHEM1001,Introduction to Chemistry
+CHEM1101,General Chemistry I
+CHEM1201,General Chemistry II
+CHEM2101,Organic Chemistry I
+CHEM2201,Organic Chemistry II
+CHEM3101,Physical Chemistry I
+CHEM3201,Physical Chemistry II
+CHEM3301,Analytical Chemistry
+CHEM3401,Inorganic Chemistry
+CHEM4101,Biochemistry I
+CHEM4201,Biochemistry II
+CHEM4301,Environmental Chemistry
+CHEM4401,Polymer Chemistry
+CHEM4501,Nuclear Chemistry
+CHEM4601,Materials Chemistry
+CHEM4701,Food Chemistry
+CHEM4801,Green Chemistry
+CHEM4901,Medicinal Chemistry
+CHEM5001,Supramolecular Chemistry
+CHEM5101,Chemical Kinetics
+CHEM5201,Quantum Chemistry
+CHEM5301,Electrochemistry
+CHEM5401,Spectroscopy
+MEEN2002,Thermodynamics
+CHEM5601,Surface Chemistry
+CHEM5701,Photochemistry
+CHEM5801,Coordination Chemistry
+CHEM5901,Chemical Biology
+CHEM6001,Forensic Chemistry
+CHEM6101,Astrochemistry
+CHEM6201,Geochemistry
+CHEM6301,Chemical Engineering
+CHEM6401,Nanomaterials Chemistry
+CHEM6501,Organometallic Chemistry
+CHEM6601,Chemical Ecology
+CHEM6701,Chemical Toxicology
+CHEM6801,Advanced Organic Synthesis
+CHEM6901,Advanced Physical Chemistry
+CHEM7001,Chemical Informatics
+CHEM7101,Chemical Education
+CHEM7201,Chemical History
+CHEM7301,Chemical Philosophy
+CHEM7401,Science Communication for Chemists
+CHEM7501,Science Writing for Chemists
+CHEM7601,Scientific Ethics in Chemistry
+MATH1010,Calculus I
+MATH1020,Calculus II
+MATH2010,Linear Algebra
+MATH2020,Discrete Mathematics
+MATH3010,Differential Equations
+MATH3020,Abstract Algebra
+MATH4010,Real Analysis I
+MATH4020,Real Analysis II
+MATH4030,Topology
+MATH4040,Numerical Analysis
+MATH1030,Calculus III
+MATH2015,Multivariable Calculus
+MATH3015,Partial Differential Equations
+MATH3025,Probability Theory
+MATH4025,Stochastic Processes
+MATH4035,Complex Analysis
+MATH4045,Functional Analysis
+MATH4055,Graph Theory
+MATH4065,Combinatorics
+MATH4075,Algebraic Geometry
+CEEN1001,Introduction to Civil Engineering
+CEEN2002,Structural Analysis and Design
+CEEN3003,Soil Mechanics and Foundations
+CEEN4004,Introduction to Environmental Engineering
+ARCH1001,Introduction to Architecture
+ARCH2002,Architectural Design and Representation
+ARCH3003,Building Systems and Technologies
+ARCH4004,Sustainable Architecture and Urbanism
+MEEN1001,Introduction to Mechanical Engineering
+MEEN3003,Fluid Mechanics
+MEEN4004,Materials Science and Engineering
+ELEN1001,Introduction to Electrical Engineering
+ELEN2002,Circuits and Electronics
+ELEN4004,Power Systems Analysis
+CEEN5005,Structural Dynamics
+CEEN6006,Transportation Engineering
+CEEN7007,Water Resources Engineering
+CEEN8008,Advanced Topics in Environmental Engineering
+ARCH5005,Architectural History and Theory
+ARCH6006,Building Information Modeling
+ARCH7007,Urban Design and Planning
+ARCH8008,Advanced Topics in Sustainable Architecture
+MEEN5005,Mechanical Design and Manufacturing
+MEEN6006,Robotics and Control
+MEEN7007,Heat Transfer
+MEEN8008,Advanced Topics in Materials Science and Engineering
+ELEN5005,Power Electronics and Renewable Energy
+ELEN6006,Advanced Circuit Design
+ELEN7007,Wireless Communications
+ELEN8008,Advanced Topics in Power Systems Analysis

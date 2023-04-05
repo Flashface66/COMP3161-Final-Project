@@ -5,12 +5,28 @@
 {% block main %}
 <div  style="height: 100vh; ">
   <div class="container-fluid py-5">
+    {% include 'flash_messages.html' %}
     <header id="page-header" class="clearfix">
       <h1 class="left">Our Virtual Learning Environment</h1>
       <div id="page-header-date" class="right"><h1 id="date"></h1></div>
+      {% block js %}
+        <script>
+          // Get the date element
+          var dateElem = document.getElementById("date");
+          
+          // Get the current date
+          var today = new Date();
+          var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+          var formattedDate = today.toLocaleDateString('en-US', options).toUpperCase().replace(/,/g, '');
+          
+          // Set the date element text to the formatted date
+          dateElem.innerText = formattedDate;
+        </script>
+      {% endblock %}
     </header>
   </div>  
 </div>
 {% endblock %}
 
-{% block js %}{% endblock %}
+
+
