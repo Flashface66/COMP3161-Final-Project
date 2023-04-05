@@ -263,6 +263,11 @@ with open('student_course.csv', mode='w', newline='') as file:
     writer.writerow(['student_id', 'course_id'])
     for student in students:
         num_courses = random.randint(3, 6)
-        course_ids = random.sample(list(courses.values()), num_courses)
-        for x in course_ids:
-            writer.writerow([student[0], x])
+        course_ids = []
+        while len(course_ids) < num_courses:
+            course_id = random.choice(list(courses.values()))
+            if course_id in course_ids or course_ids.count(course_id) >= 10:
+                continue
+            course_ids.append(course_id)
+        for course_id in course_ids:
+            writer.writerow([student[0], course_id])
