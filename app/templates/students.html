@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block css %}{% endblock %}
+{% block main %}
+
+<div class="container">
+    {% for student in students %}
+    <p>
+        <a href="{{ students.url }}">{{ student.student_id }} {{ student.first_name }} {{ student.last_name }}</a>
+    </p>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -238,11 +238,11 @@ for student_id in student_ids:
 
     email = f"{last_name.lower()}.{first_name.lower()}@example.com"
 
-    students.append([student_id, first_name, last_name, email])
+    students.append([student_id, first_name, last_name, email, 1])
 
 with open('students.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(['student_id', 'first_name', 'last_name', 'email'])
+    writer.writerow(['student_id', 'first_name', 'last_name', 'email', 'user_type'])
     for student in students:
         writer.writerow(student)
 

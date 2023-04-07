@@ -239,11 +239,11 @@ for lecturer_id in lect_id:
 
     email = f"{last_name.lower()}.{first_name.lower()}@example.edu"
 
-    lecturers.append([lecturer_id, first_name, last_name, email])
+    lecturers.append([lecturer_id, first_name, last_name, email, 2])
 
 with open('lecturers.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
-    writer.writerow(['lecturer_id', 'first_name', 'last_name', 'email'])
+    writer.writerow(['lecturer_id', 'first_name', 'last_name', 'email', 'user_type'])
     for lect in lecturers:
         writer.writerow(lect)
 
@@ -254,6 +254,16 @@ for course, id in courses.items():
 with open('lecturer_course.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['lecturer_id', 'course_id'])
-    for course_id in courses.values():
-        lecturer_id = random.choice(lecturers)
-        writer.writerow([lecturer_id[0], course_id])
+
+    available_courses = list(courses.values())
+    for i, lecturer in enumerate(lecturers):
+        if i < 150:
+            course_id = available_courses.pop(0)
+            writer.writerow([lecturer[0], course_id])
+
+    random.shuffle(available_courses)
+    random.shuffle(lecturers)
+
+    for course_id in available_courses:
+        lecturer_id = random.choice(lecturers)[0]
+        writer.writerow([lecturer_id, course_id])

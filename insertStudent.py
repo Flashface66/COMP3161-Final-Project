@@ -12,7 +12,8 @@ cursor.execute("""CREATE TABLE students (
     student_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    email VARCHAR(100)
+    email VARCHAR(100),
+    user_type INT
 )""")
 
 cursor.execute("""CREATE TABLE courses (
@@ -29,10 +30,11 @@ cursor.execute("""CREATE TABLE student_course (
 )""")
 
 cursor.execute("""CREATE TABLE lecturers (
-    lect_id INT PRIMARY KEY,
+    lect_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50),
     last_name VARCHAR(50),
-    email VARCHAR(100)
+    email VARCHAR(100),
+    user_type INT
 )""")
 
 cursor.execute("""CREATE TABLE lect_course (
@@ -43,13 +45,25 @@ cursor.execute("""CREATE TABLE lect_course (
   FOREIGN KEY (course_id) REFERENCES courses (course_id)
 )""")
 
+
+cursor.execute("""CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_id INT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    user_type INT,
+    account_type VARCHAR(20)
+)""")
+
+
 with open('students.csv', newline='') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     next(reader)
     
     for row in reader:
-        query = "INSERT INTO students (student_id, first_name, last_name, email) VALUES (%s, %s, %s, %s)"
-        values = (int(row[0]), row[1], row[2], row[3])
+        query = "INSERT INTO students (student_id, first_name, last_name, email, user_type) VALUES (%s, %s, %s, %s, %s)"
+        values = (int(row[0]), row[1], row[2], row[3], row[4])
         cursor = mydb.cursor()
         cursor.execute(query, values)
 
@@ -58,8 +72,8 @@ with open('lecturers.csv', newline='') as csvfile:
     next(reader)
     
     for row in reader:
-        query = "INSERT INTO lecturers (lect_id, first_name, last_name, email) VALUES (%s, %s, %s, %s)"
-        values = (int(row[0]), row[1], row[2], row[3])
+        query = "INSERT INTO lecturers (lect_id, first_name, last_name, email, user_type) VALUES (%s, %s, %s, %s, %s)"
+        values = (int(row[0]), row[1], row[2], row[3], row[4])
         cursor = mydb.cursor()
         cursor.execute(query, values)
 
@@ -92,6 +106,17 @@ with open('lecturer_course.csv', newline='') as csvfile:
         values = (row[0], row[1])
         cursor = mydb.cursor()
         cursor.execute(query, values)
+
+cursor.execute("""
+    INSERT INTO users (account_id, first_name, last_name, email, user_type, account_type)
+    SELECT student_id, first_name, last_name, email, user_type, 'students' FROM students
+""")
+
+cursor.execute("""
+    INSERT INTO users (account_id, first_name, last_name, email, user_type, account_type)
+    SELECT lect_id, first_name, last_name, email, user_type, 'lecturers' FROM lecturers 
+""")
+
 
 
 mydb.commit()

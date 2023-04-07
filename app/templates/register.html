@@ -17,6 +17,10 @@
       {{ form.email(class='form-control', placeholder="Enter your email") }}
       {{ form.email.label() }}
     </div>
+    <div class="form-floating mb-3">
+      {{ form.user_type(class='form-select', aria_label='Select user type') }}
+      {{ form.user_type.label() }}
+    </div>
     <button class="btn btn-lg btn-primary w-100 mb-3" type="submit">Register</button>
   </form>
 {% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block css %}{% endblock %}
+{% block main %}
+
+<div class="container">
+    {% for lecturer in lecturers %}
+    <p>
+        
+        <a href="{{ lecturer.url }}">{{ lecturer.lect_id }} {{ lecturer.first_name }} {{ lecturer.last_name }}</a>
+
+    </p>
+    {% endfor %}
+</div>
+
+{% endblock %}
