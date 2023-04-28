@@ -3,12 +3,41 @@
 {% block css %}{% endblock %}
 
 {% block main %}
-<div  style="height: 100vh; ">
-  <div class="container-fluid py-5">
+<div  >
+  <div class="home">
     {% include 'flash_messages.html' %}
     <header id="page-header" class="clearfix">
       <h1 class="left">Our Virtual Learning Environment</h1>
       <div id="page-header-date" class="right"><h1 id="date"></h1></div>
+      
+      <br><br><br>
+      <div class="sections">
+        <h1>Course Sections</h1>
+        <br><br><br><br><br>
+        <ul>
+        {% for course in courses %}
+          <h2>{{course.course_name}}</h2>
+          {% for con in content %}
+            {% if course.course_id == con.course_id %} 
+              {% for section in con.sections %}
+                    <hr>
+                    <li>
+                    <h4>{{ section.section_title }}</h4>
+                    <ul>
+                        {% for item in section.section_content %}
+                          <li><h5>{{ item.content_name }}</h5></li>
+                          <li><a href="#"><h6>{{ item.content_file}}</h6></a></li>
+                          <br>
+                        {% endfor %}
+                    </ul>
+                    </li>
+                    <hr>
+              {% endfor %} 
+            {% endif %}      
+          {% endfor %}
+        {% endfor %}
+        </ul>
+      </div>
       {% block js %}
         <script>
           // Get the date element

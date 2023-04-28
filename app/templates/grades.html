@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block css %}{% endblock %}
+{% block main %}
+
+<div class="container">
+    {% for grade in grades %}
+    <p>
+        <a href="{{ grade.url }}">{{ grade.course_id}} {{ grade.assignment_id}} {{grade.grade}}</a>
+    </p>
+    {% endfor %}
+</div>
+
+{% endblock %}

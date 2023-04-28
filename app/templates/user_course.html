@@ -6,7 +6,8 @@
 <div class="container">
     {% for course in courses %}
     <p>
-        <a href="{{ course.url }}">{{ course.course_name }}</a>
+        <a href="{{ url_for('view_section_content', course_id=course.course_id) }}">{{ course.course_id }} {{ course.course_name }}</a>
+
     </p>
     {% endfor %}
 </div>

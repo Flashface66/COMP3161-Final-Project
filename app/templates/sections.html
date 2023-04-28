@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block css %}{% endblock %}
+{% block main %}
+
+<div class="container">
+    <h1>Course Sections</h1>
+    <ul>
+    {% for section in sections %}
+        <hr>
+        <li>
+        <h3>{{ section.section_title }}</h3>
+        <ul>
+            
+            {% for item in content %}
+                {% for ele in item %}
+                    {% if ele.section_id == section.section_id %}
+                        <li><h5>{{ ele.content_name }}</h5></li>
+                        <li><a href="#"><h6>{{ ele.content_file}}</h6></a></li>
+                        <br>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </ul>
+        </li>
+        <hr>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
